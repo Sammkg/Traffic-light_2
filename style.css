@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    background-image:
+        linear-gradient(45deg, transparent 50%, #e8e8e4, #e8e8e4,transparent 55%),
+        linear-gradient(45deg, #e8e8e4 5%, transparent 5%);
+    background-color: #fefffe;
+    background-size: 1em 1em;
+}
+.container{
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    background-image: url(./traffic-light.png);
+    background-size: 300px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+ul {
+    height: 257px;
+    width: 100px;
+    list-style: none;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 29px;
+    margin-left: 74px;
+    padding: 0px;
+    /* background: #3c4147; */
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.7) 2px 2px 1px #3C4147;
+}
+li {
+    width: 71px;
+    height: 71px;
+    margin-right: 7px;
+    margin-top: 8px;
+    border-radius: 50%;
+    background: black;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4), inset -2px -2px 4px rgba(255, 255, 255, 0.6);
+}
+@keyframes traffic {
+    0% {background: red;}
+    29% {background: red;}
+    31% {background: black;}
+    100% {background: black;};
+}
+@keyframes traffic1 {
+    74% {background: black;}
+    75% {background: yellow;}
+    80% {background: yellow;}
+    82% {background: black;}
+    83% {background: black;}
+    85% {background: yellow;}
+    90% {background: yellow;}
+    92% {background: black;}
+    93% {background: black;}
+    95% {background: yellow;}
+    100% {background: yellow;}
+}
+@keyframes traffic2 {
+    0% {background: black;}
+    31% {background: black;}
+    32% {background: #33ff33;}
+    62% {background: #33ff33;}
+    63% {background: black;}
+    65% {background: black;}
+    66% {background: #33ff33;}
+    68% {background: #33ff33;}
+    72% {background: #33ff33;}
+    74% {background: #33ff33;}
+    75% {background: black;}
+    100% {background: black;}
+
+}
+.container li:nth-of-type(1) {
+    margin-bottom: 5px;
+    animation: traffic 10s linear infinite;
+}
+.container li:nth-of-type(2) {
+    margin-bottom: 5px;
+    animation: traffic1 10s linear infinite;
+}
+.container li:nth-of-type(3) {
+    animation: traffic2 10s linear infinite;
+}
